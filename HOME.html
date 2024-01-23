@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Assistant' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Anonymous Pro' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+
+
+    <title>Mountain Magic</title>
+    <style>
+        body {
+            background-color: rgb(186, 189, 176);
+        }
+
+        #navbar {
+            font-family: 'Anonymous Pro';
+            font-size: 26px;
+        }
+
+        #content {
+            font-family: 'Assistant';
+            font-size: 22px;
+        }
+
+        body {
+            padding-top: 0px;
+        }
+
+        .transition-content {
+            opacity: 1;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .transition-content.hidden {
+            opacity: 0;
+        }
+
+        #carousel-container {
+            margin-top: 0px;
+        }
+
+        #carouselExample img {
+            width: 120%;
+            height: 0%;
+            object-fit: cover;
+        }
+
+        #carouselExample img {
+            width: 500px;
+            height: 100%;
+            object-fit: cover;
+            .a{
+                text-decoration: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="navbar">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary text-light fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="img\mountain-magic-3-2.png" width="20%"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link  mb-2 mb-md-0" href="HOME.html" onclick="loadPage('home')">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  mb-2 mb-md-0" href="About.html" onclick="loadPage('about')">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  mb-2 mb-md-0" href="contact.html" onclick="loadPage('contact')">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div id="content">
+
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/1.jpg" alt="Los Angeles" class="d-block" style="width:100%">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/2.jpg" alt="Chicago" class="d-block" style="width:100%">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/3.jpg" alt="New York" class="d-block" style="width:100%">
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+
+        <div class="container mt-4">
+            <div class="row">
+                
+                <div class="col-md-3">
+                    <div class="card m-2" style="width: 14rem;">
+                        <img class="card-img-top ml-auto" src="img/paris.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title" align="center">Paris</h4>
+                            <p class="card-text">Paris is a wonderful place to take photos.</p>
+                        </div>
+
+                        <div class="text-center card-body">
+                            <type="button" class="btn btn-warning">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card m-2" style="width: 14rem;">
+                        <img class="card-img-top ml-auto" src="img/dubai 2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title" align="center">Dubai</h4>
+                            <p class="card-text">Dubai is a city of skyscrapers.</p>
+                        </div>
+                        <div class="text-center card-body">
+                            <button type="button" class="btn btn-primary">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-3">
+                    <div class="card m-2" style="width: 14rem;">
+                        <img class="card-img-top ml-auto" src="img/singapore.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title" align="center">Singapore</h4>
+                            <p class="card-text">A concrete version of paradise.</p>
+                        </div>
+
+                        <div class="text-center card-body">
+                            <button type="button" class="btn btn-dark">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-3">
+                    <div class="card m-2" style="width: 14rem;">
+                        <img class="card-img-top ml-auto" src="img/maldives 1.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title" align="center">Maldives</h4>
+                            <p class="card-text">Maldives Has White Beaches</p>
+                        </div>
+
+                        <div class="text-center card-body">
+                            <button type="button" class="btn btn-success">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-3">
+                    <div class="card m-2 mt-4" style="width: 14rem;">
+                        <img class="card-img-top ml-auto" src="img/hong kong.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title" align="center">Hong Kong</h4>
+                            <p class="card-text">Hong Kong is a wonderful and a mixed-up town.</p>
+                        </div>
+                        <div class="text-center card-body">
+                            <button type="button" class="btn btn-danger">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-3">
+                    <div class="card m-2 mt-4" style="width: 14rem;">
+                        <img class="card-img-top ml-auto" src="img/vietnam.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title" align="center">Vietnam</h4>
+                            <p class="card-text">The country has a diverse landscape and great food. </p>
+                        </div>
+                        <div class="text-center card-body">
+                            <button type="button" class="btn btn-secondary">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-3">
+                    <div class="card m-2 mt-4" style="width: 14rem;">
+                        <img class="card-img-top ml-auto" src="img/bali.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title" align="center">Bali</h4>
+                            <p class="card-text">Bali will cure whatever is Aling-Aling you.</p>
+                        </div>
+                        
+                        <div class="text-center card-body">
+                            <button type="button" class="btn btn-warning">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-3">
+                    <div class="card m-2 mt-4" style="width: 14rem;">
+                        <img class="card-img-top ml-auto" src="img/brazil 2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title" align="center">Brazil</h5>
+                            <p class="card-text">Unforgettable moments in the land of samba.</p>
+                        </div>
+                        <div class="text-center card-body">
+                            <button type="button" class="btn btn-primary">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+#include<stdio.h>
+#include<conio.h>
+#include<process.h>
+#include<malloc.h>
+struct node
+{
+	int data;
+	struct node *link;
+}*first,*save,*new_node;
+void insert_sorted(int);
+void display(void);
+void main()
+{
+	int ch,x;
+	clrscr();
+	while(1)
+	{
+		printf("\n-----LINKED LIST----------\n");
+		printf("1. Insert Sorted\n 2. Display\n 3. Exit");
+		printf("\nEnter your choice..");
+		scanf("%d",&ch);
+		switch(ch)
+		{
+			case 1:
+				printf("\nEnter value...");
+				scanf("%d",&x);
+				insert_sorted(x);
+				break;
+			case 2:
+				display();
+				break;
+			case 3:
+				exit(0);
+			default: printf("\n Enter valid choice..");
+		}
+	}
+}
+void insert_sorted(int x)
+{
+	new_node=(struct node *)malloc(sizeof(struct node));
+	if(new_node==NULL)
+	{
+		printf("\n Memory Full..");
+		return;
+	}
+	new_node->data=x;
+	new_node->link=NULL;
+	if(first==NULL)
+	{
+		first=new_node;
+		return;
+	}
+	if(new_node->data <= first->data)
+	{
+		new_node->link=first;
+		first=new_node;
+		return;
+	}
+	save=first;
+	while(save->link!=NULL && save->link->data <= new_node->data)
+	{
+		save=save->link;
+	}
+	new_node->link = save->link;
+	save->link=new_node;
+	return;
+}
+void display(void)
+{
+	if(first==NULL)
+	{
+		printf("\n List is emplty...");
+		return;
+	}
+	save=first;
+	while(save!=NULL)
+	{
+		printf("\n-----------------------\n");
+		printf("\n DATA = %d",save->data);
+		printf("\n LINK = %d",save->link);
+		printf("\n Add of Node=%d",save);
+		save=save->link;
+	}
+
+	getch();
+	return;
+}
