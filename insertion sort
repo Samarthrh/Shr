@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+  int k[15],i,j,key,n;
+  clrscr();
+  printf("****insertion sort**** \n");
+  printf("Rojara Samarth H. \n");
+  printf("226090307120 \n");
+  printf("how many elements:\n");
+  scanf("%d",&n);
+  printf("\n enter data:\n");
+  for(i=0;i<n;i++)
+  {
+    scanf("%d",&k[i]);
+  }
+ i=1;
+ while(i<n)
+{
+   key=k[i];
+   j=i-1;
+   while(j>=0 && key<k[j])
+   {
+     k[j+1]=k[j];
+     j--;
+   }
+   k[j+1]=key;
+   i++;
+}
+   printf("after sorting:\n");
+   for(i=0;i<n;i++)
+   {
+      printf("%4d",k[i]);
+   }
+   getch();
+}
+
+

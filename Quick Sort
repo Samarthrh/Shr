@@ -1,0 +1,64 @@
+#include<stdio.h>
+#include<conio.h>
+void quick_sort(int[],int,int);
+void main()
+{
+   int a[50],n,i,lb,ub;
+   clrscr();
+   printf("****quick shot**** \n");
+   printf("\n Rojara Samarth H. n");
+   printf("\n 226090307120");
+   printf("\n how many elements you want to sort:");
+   scanf("%d",&n);
+   printf("\n enter %d values \n",n);
+   for(i=0;i<n;i++)
+ {
+   scanf("%d",&a[i]);
+ }
+   printf("\n before sort:");
+   for(i=0;i<n;i++)
+  {
+   printf("%4d",a[i]);
+  }
+ quick_sort(a,0,n-1);
+ printf("\n after sort:");
+ for(i=0;i<n;i++)
+ {
+   printf("%4d",a[i]);
+ }
+getch();
+}
+void quick_sort(int a[10],int lb,int ub)
+{
+  int i,j,key,temp;
+  if(lb<ub)
+{
+  key=lb;
+  i=lb;
+  j=ub+1;
+
+  while(i<j)
+  {
+    while(a[i]<=a[key] && i<lb)
+    i++;
+    j--;
+    while(a[j]>a[key])
+    j--;
+
+   if(i<j)
+   {
+     temp=a[i];
+     a[i]=a[j];
+     a[j]=temp;
+   }
+}
+   temp=a[key];
+   a[key]=a[j];
+   a[j]=temp;
+   quick_sort(a,lb,j-1);
+   quick_sort(a,j+1,ub);
+
+}
+getch();
+}
+

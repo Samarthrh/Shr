@@ -1,0 +1,54 @@
+#include<stdio.h>
+#include<conio.h>
+void display(int a[],int n)
+{
+  int i;
+  for(i=0;i<n;i++)
+  {
+     printf("%d\t",a[i]);
+  }
+}
+void selection_sort(int a[],int n)
+{
+   int pass;
+   int i;
+   int min_index;
+   int temp;
+   for(pass=0;pass<n;pass++)
+   {
+     min_index=pass-1;
+     for(i=pass;i<n;i++)
+     {
+	if(a[i]<a[min_index])
+	{
+	  min_index=i;
+	}
+     }
+     if(min_index!=pass-1)
+     {
+	temp=a[pass];
+	a[pass]=a[min_index];
+	a[min_index]=temp;
+     }
+   }
+}
+void main()
+{
+  int n,i;
+  int a[30];
+  clrscr();
+  printf("****selection sort**** \n");
+  printf("Rojara Samarth H:\n");
+  printf("226090307120:\n");
+  printf("enter array size:");
+  scanf("%d",&n);
+  for(i=0;i<n;i++)
+  {
+     scanf("%d",&a[i]);
+  }
+  selection_sort(a,n);
+  display(a,n);
+  getch();
+}
+
+
